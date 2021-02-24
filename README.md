@@ -1,26 +1,70 @@
-# CDCgov GitHub Organization Open Source Project Template
-
-**Template for clearance: This project serves as a template to aid projects in starting up and moving through clearance procedures. To start, create a new repository and implement the required [open practices](open_practices.md), train on and agree to adhere to the organization's [rules of behavior](rules_of_behavior.md), and [send a request through the create repo form](https://forms.office.com/Pages/ResponsePage.aspx?id=aQjnnNtg_USr6NJ2cHf8j44WSiOI6uNOvdWse4I-C2NUNk43NzMwODJTRzA4NFpCUk1RRU83RTFNVi4u) using language from this template as a Guide.**
-
-**General disclaimer** This repository was created for use by CDC programs to collaborate on public health related projects in support of the [CDC mission](https://www.cdc.gov/about/organization/mission.htm).  GitHub is not hosted by the CDC, but is a third party website used by CDC and its partners to share information and collaborate on software. CDC use of GitHub does not imply an endorsement of any one particular service, product, or enterprise. 
-
-## Access Request, Repo Creation Request
-
-* [CDC GitHub Open Project Request Form](https://forms.office.com/Pages/ResponsePage.aspx?id=aQjnnNtg_USr6NJ2cHf8j44WSiOI6uNOvdWse4I-C2NUNk43NzMwODJTRzA4NFpCUk1RRU83RTFNVi4u) _[Requires a CDC Office365 login, if you do not have a CDC Office365 please ask a friend who does to submit the request on your behalf. If you're looking for access to the CDCEnt private organization, please use the [GitHub Enterprise Cloud Access Request form](https://forms.office.com/Pages/ResponsePage.aspx?id=aQjnnNtg_USr6NJ2cHf8j44WSiOI6uNOvdWse4I-C2NUQjVJVDlKS1c0SlhQSUxLNVBaOEZCNUczVS4u).]_
-
-## Related documents
-
-* [Open Practices](open_practices.md)
-* [Rules of Behavior](rules_of_behavior.md)
-* [Thanks and Acknowledgements](thanks.md)
-* [Disclaimer](DISCLAIMER.md)
-* [Contribution Notice](CONTRIBUTING.md)
-* [Code of Conduct](code-of-conduct.md)
+# MycoSNP Workflows
 
 ## Overview
 
-Describe the purpose of your project. Add additional sections as necessary to help collaborators and potential collaborators understand and use your project.
-  
+MycoSNP includes the following set of three GeneFlow workflows:
+
+1. MycoSNP BWA Reference v0.9:
+    * https://github.com/CDCgov/mycosnp-bwa-reference
+    * Prepares a reference FASTA file for BWA alignment and GATK variant calling by masking repeats in the reference and generating the BWA index.
+2. MycoSNP BWA Pre-Process:
+    * https://github.com/CDCgov/mycosnp-bwa-pre-process
+    * Prepares samples (paired-end FASTQ files) for GATK variant calling by aligning the samples to a BWA reference index and ensuring that the BAM files are correctly formatted.
+3. MycoSNP GATK Variants:
+    * https://github.com/CDCgov/mycosnp-gatk-variants
+    * Calls variants and generates a multi-FASTA file. 
+
+This repository contains installation instructions common for all workflows. 
+
+## Requirements
+
+To run any of the three workflows, please ensure that your computing environment meets the following requirements:
+
+1. Linux Operating System
+
+2. Git
+
+3. SquashFS, required for executing Singularity containers - Most standard Linux distributions have SquashFS installed and enabled by default. However, in the event that SquashFS is not enabled, we recommend that you check with your system administrator to install it. Alternatively, you can enable it by following these instructions (warning: these docs are for advanced users): https://www.tldp.org/HOWTO/html_single/SquashFS-HOWTO/
+
+4. Python 3+
+
+5. Singularity
+
+6. GeneFlow (https://github.com/CDCgov/geneflow2, install instructions below)
+
+7. DRMAA library, required for executing the workflow in an HPC environment
+
+## Installation
+
+First install GeneFlow and its dependencies as follows:
+
+1. Create a Python virtual environment to install dependencies and activate that environment.
+
+    ```bash
+    mkdir -p ~/mycosnp
+    cd ~/mycosnp
+    python3 -m venv ~/mycosnp/gfpy
+    source ~/mycosnp/gfpy/bin/activate
+    ```
+
+2. Install GeneFlow.
+
+    ```bash
+    pip3 install geneflow
+    ```
+
+3. Install the Python DRMAA library if you need to execute the workflow in an HPC environment. Skip this step if you do not need HPC.
+
+    ```bash
+    pip3 install drmaa
+    ```
+
+4. Install and run any of the three MycoSNP workflows by following the instructions for each workflow:
+
+    * MycoSNP BWA Reference v0.9: https://github.com/CDCgov/mycosnp-bwa-reference
+    * MycoSNP BWA Pre-Process: https://github.com/CDCgov/mycosnp-bwa-pre-process
+    * MycoSNP GATK Variants: https://github.com/CDCgov/mycosnp-gatk-variants
+
 ## Public Domain Standard Notice
 This repository constitutes a work of the United States Government and is not
 subject to domestic copyright protection under 17 USC § 105. This repository is in
