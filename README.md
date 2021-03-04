@@ -10,7 +10,7 @@ MycoSNP includes the following set of three GeneFlow workflows:
 2. MycoSNP BWA Pre-Process v0.14:
     * https://github.com/CDCgov/mycosnp-bwa-pre-process
     * Prepares samples (paired-end FASTQ files) for GATK variant calling by aligning the samples to a BWA reference index and ensuring that the BAM files are correctly formatted.
-3. MycoSNP GATK Variants v0.12:
+3. MycoSNP GATK Variants v0.13:
     * https://github.com/CDCgov/mycosnp-gatk-variants
     * Calls variants and generates a multi-FASTA file. 
 
@@ -63,7 +63,7 @@ First install GeneFlow and its dependencies as follows:
 
     * MycoSNP BWA Reference v0.9: https://github.com/CDCgov/mycosnp-bwa-reference
     * MycoSNP BWA Pre-Process v0.14: https://github.com/CDCgov/mycosnp-bwa-pre-process
-    * MycoSNP GATK Variants v0.12: https://github.com/CDCgov/mycosnp-gatk-variants
+    * MycoSNP GATK Variants v0.13: https://github.com/CDCgov/mycosnp-gatk-variants
 
 ## Public Domain Standard Notice
 This repository constitutes a work of the United States Government and is not
