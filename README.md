@@ -2,15 +2,15 @@
 
 ## Overview
 
-MycoSNP includes the following set of three GeneFlow workflows:
+MycoSNP (version 0.16) includes the following set of three GeneFlow workflows:
 
-1. MycoSNP BWA Reference v0.9:
+1. MycoSNP BWA Reference:
     * https://github.com/CDCgov/mycosnp-bwa-reference
     * Prepares a reference FASTA file for BWA alignment and GATK variant calling by masking repeats in the reference and generating the BWA index.
-2. MycoSNP BWA Pre-Process v0.16:
+2. MycoSNP BWA Pre-Process:
     * https://github.com/CDCgov/mycosnp-bwa-pre-process
     * Prepares samples (paired-end FASTQ files) for GATK variant calling by aligning the samples to a BWA reference index and ensuring that the BAM files are correctly formatted.
-3. MycoSNP GATK Variants v0.13:
+3. MycoSNP GATK Variants:
     * https://github.com/CDCgov/mycosnp-gatk-variants
     * Calls variants and generates a multi-FASTA file. 
 
