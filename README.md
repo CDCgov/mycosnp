@@ -2,7 +2,7 @@
 
 ## Overview
 
-MycoSNP (version 0.16) includes the following set of three GeneFlow workflows:
+MycoSNP (version 0.18) includes the following set of three GeneFlow workflows:
 
 1. MycoSNP BWA Reference:
     * https://github.com/CDCgov/mycosnp-bwa-reference
@@ -61,9 +61,9 @@ First install GeneFlow and its dependencies as follows:
 
 4. Install and run any of the three MycoSNP workflows by following the instructions for each workflow:
 
-    * MycoSNP BWA Reference v0.9: https://github.com/CDCgov/mycosnp-bwa-reference
-    * MycoSNP BWA Pre-Process v0.14: https://github.com/CDCgov/mycosnp-bwa-pre-process
-    * MycoSNP GATK Variants v0.13: https://github.com/CDCgov/mycosnp-gatk-variants
+    * MycoSNP BWA Reference: https://github.com/CDCgov/mycosnp-bwa-reference
+    * MycoSNP BWA Pre-Process: https://github.com/CDCgov/mycosnp-bwa-pre-process
+    * MycoSNP GATK Variants: https://github.com/CDCgov/mycosnp-gatk-variants
 
 ## Public Domain Standard Notice
 This repository constitutes a work of the United States Government and is not
