@@ -2,7 +2,7 @@
 
 ## Overview
 
-MycoSNP (version 0.18) includes the following set of three GeneFlow workflows:
+MycoSNP (version 0.19) includes the following set of three GeneFlow workflows:
 
 1. MycoSNP BWA Reference:
     * https://github.com/CDCgov/mycosnp-bwa-reference
