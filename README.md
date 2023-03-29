@@ -1,4 +1,4 @@
-# MycoSNP Workflows
+# MycoSNP Workflows (Geneflow is no more used. Please use the newer nextflow version of mycosnp https://github.com/CDCgov/mycosnp-nf)
 
 ## Overview
 MycoSNP is a portable workflow for performing whole genome sequencing analysis of fungal organisms, including Candida auris. This method prepares the reference, performs quality control, and calls variants using a reference. MycoSNP generates several output files that are compatible with downstream analytic tools, such as those for used for phylogenetic tree-building and gene variant annotations. 
